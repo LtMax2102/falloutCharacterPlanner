@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="images/vault_boy1.webp">
+        <title>Fallout 4 Character Planner</title>
+    </head>
+    
+    <body>
+        <div class="sidemenu">
+            <p id="current_level">Current Level</p>
+            <button onclick="level_up()">Level Up</button>
+            <button onclick="level_down()">Level Down</button>
+        </div>
+
+        <div class="holder">
+            <div class="container" id="strength">
+                <div class="perk">
+                    <img src="images/strength/Fo4_Strength.png" alt="fallout 4 strength icon">
+                    <div class="description">
+                        <h1>Strength</h1>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Iron_Fist.webp" alt="fallout 4 iron fist icon">
+                    <div class="description">
+                        <h1>Iron Fists</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Channel your chi to unleash devastating fury! Punching attacks do 20% more damage to your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Punching attacks now do 40% more damage and can disarm your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Punching attacks now do 60% more damage. Unarmed Power Attacks have a chance to cripple one of your opponent's limbs.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>Punching attacks now do 80% more damage. Unarmed Power Attacks have an increased chance to cripple one of your opponent's limbs.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5</h4>
+                                    <p>Punching attacks now do double damage. Criticals in V.A.T.S. will paralyze your opponent.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Big_Leagues.webp" alt="fallout 4 big leagues icon">
+                    <div class="description">
+                        <h1>Big Leagues</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Swing for the fences! Do 20% more melee weapon damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You now do 40% more melee weapon damage and gain a chance to disarm your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You now do 60% more melee weapon damage and gain an increased chance to disarm your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>You now do 80% more melee weapon damage and hit all targets in front of you.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5</h4>
+                                    <p>You now do double damage with a melee weapon, and gain a chance to cripple your opponent, or grand slam their head clean off!</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Armorer.webp" alt="fallout 4 armorer icon">
+                    <div class="description">
+                        <h1>Armorer</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Protect yourself from the dangers of the Wasteland with access to base level and Rank 1 armor mods.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You gain access to Rank 2 armor mods.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You gain access to Rank 3 armor mods.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>You gain access to Rank 4 armor mods.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Blacksmith.webp" alt="fallout 4 blacksmith icon">
+                    <div class="description">
+                        <h1>Blacksmith</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Fire up the forge and gain access to base level and Rank 1 melee weapon mods.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>ou gain access to Rank 2 melee weapon mods.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>ou gain access to Rank 3 melee weapon mods.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Heavy_Gunner.webp" alt="fallout 4 heavy gunner icon">
+                    <div class="description">
+                        <h1>Heavy Gunner</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Thanks to practice and conditioning, heavy guns do 20% more damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Heavy guns now do 40% more damage, and have improved hip fire accuracy.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Heavy guns now do 60% more damage. Hip fire accuracy is increased even more.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>Heavy guns now do 80% more damage and have a chance to stagger your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5</h4>
+                                    <p>Heavy guns now do double damage.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Strong_Back.webp" alt="fallout 4 strong back icon">
+                    <div class="description">
+                        <h1>Strong Back</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>What are you, part pack mule? Gain +25 to carry weight.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You now have +50 to carry weight.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>When overencumbered, you can use Action Points to run.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>(Normal mode) When overencumbered, you can fast travel.<br>(Survival mode) When overencumbered, you will not become injured.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5 (Far Harbor)</h4>
+                                    <p>When overencumbered, running costs 50% less Action Points.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Steady_Aim.webp" alt="fallout 4 steady aim icon">
+                    <div class="description">
+                        <h1>Steady Aim</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Stay on target! Hip-fire accuracy is improved when firing any gun.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Hip-fire accuracy is improved even more when firing any gun.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3 (Nuka World)</h4>
+                                    <p>Hip-fire damage is improved when firing any gun.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Basher.webp" alt="fallout 4 basher icon">
+                    <div class="description">
+                        <h1>Basher</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Get up close and personal! Gun bashing does 25% more damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Gun bashing now does 50% more damage and possibly cripples your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Gun bashing now does 75% more damage and has an increased chance to cripple your opponent.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>Gun bashing does double damage and has an increased chance to cripple your opponent. It may also inflict a Critical Hit.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Rooted.webp" alt="fallout 4 rooted icon">
+                    <div class="description">
+                        <h1>Rooted</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>You're part tree! While standing still, you gain +25 Damage Resistance and your melee and unarmed attacks deal 25% more damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>While standing still, you now gain +50 Damage Resistance and your melee and unarmed attacks deal 50% more damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>While standing still, you may automatically disarm enemies that use melee weapons against you.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <img src="images/strength/Fo4_Pain_Train.webp" alt="fallout 4 pain train icon">
+                    <div class="description">
+                        <h1>Pain Train</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Choo Choo! All aboard! While wearing Power Armor, sprinting into enemies hurts and staggers them. (Robots and oversized enemies are immune to the stagger.)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Sprinting into enemies while wearing Power Armor now causes severe damage and a more powerful stagger. (Robots and oversized enemies are immune to the stagger.)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Sprinting into enemies while wearing Power Armor now causes massive damage and knocks them down. Impact landing near enemies inflicts even more damage.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>  
+    </body>
+
+    <script src="javascript.js"></script>
+</html>
