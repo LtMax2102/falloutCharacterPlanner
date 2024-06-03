@@ -1,7 +1,11 @@
 let current_level = 1;
 
 let strength = 1;
+const strength_perks = document.getElementById("strength").getElementsByClassName("perk");
+
 let perception = 1;
+const perception_perks = document.getElementById("perception").getElementsByClassName("perk");
+
 let endurance = 1;
 let charisma = 1;
 let inteligence = 1;
@@ -56,16 +60,31 @@ document.querySelectorAll('.perk img').forEach(img => {
         description.style.top = '-100px'; // reset to initial position
         description.style.left = '-250px'; // reset to initial position
     });
+
+    const parent = img.parentElement;
+
+    const amount_of_ranks = parent.getElementsByClassName("rank-desc").length;
+
+    let counter = parent.getElementsByClassName("counter")[0];
+
+
+    if (counter) {
+        counter.textContent = "0/" + amount_of_ranks;
+    }
+    // parent.getElementsByClassName("counter")[0];
+
 });
 
 
 
 const level_up = () => {
     current_level += 1;
+    document.getElementById("current_level").textContent = "Current Level: " + current_level;
     console.log(current_level);
 }
 
 const level_down = () => {
     current_level -= 1;
+    document.getElementById("current_level").textContent = "Current Level: " + current_level;
     console.log(current_level);
 }
