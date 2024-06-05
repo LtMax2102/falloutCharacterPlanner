@@ -6,9 +6,22 @@
     font-family: "Roboto", sans-serif;
 }
 
+button {
+    color: cornsilk;
+    background-color: #008e00;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f00;
+}
+
 body {
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
+    background-color: black;
 }
 
 .perk {
@@ -36,14 +49,65 @@ img {
 
 .sidemenu {
     min-width: 300px;
+    color: #00ee00;
+}
+
+.sidemenu fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 250px;
+    border: 3px solid #00ee00;
+    gap: 4px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.sidemenu section button {
+    width: 49%;
+    padding: 10px;
+}
+
+.sidemenu legend {
+    margin: 10px;
+}
+
+.sidemenu fieldset span {
+    width: 30px;
+}
+
+.sidemenu div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidemenu div button {
+    width: 21px;
+    appearance: none;
+    border: none;
+    cursor: pointer;
 }
 
 .perk-counter-holder {
     position: absolute;
     display: flex;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
     justify-content: space-evenly;
+    color: #00ee00;
+    padding: 3px 0;
+}
+
+.perk-counter-holder button {
+    padding: 0 10px;
+    width: 27px;
+    appearance: none;
+    background-color: #008e00;
+    border: none;
+    cursor: pointer;
+}
+
+.perk-counter-holder button:hover {
+    background-color: #005f00;
 }
 
 .description {
@@ -54,7 +118,7 @@ img {
     top: -100px;
     display: none;
 
-    background-color: black;
+    background-color: #002f00;
     font-family: "Roboto", sans-serif;
     color: #00ee00;
     text-transform: uppercase;

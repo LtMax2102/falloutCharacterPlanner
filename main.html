@@ -11,8 +11,23 @@
     <body>
         <div class="sidemenu">
             <p id="current_level">Current Level</p>
-            <button onclick="level_up()">Level Up</button>
-            <button onclick="level_down()">Level Down</button>
+            <p>Unused Points: <span id="unused-points"></span></p>
+
+            <section>
+                <button onclick="level_up()">Level Up</button>
+                <button onclick="level_down()">Level Down</button>
+            </section>
+
+            <fieldset>
+                <legend>S.P.E.C.I.A.L</legend>
+                <p>Strength: </p><span id="strength-level"></span><div><button onclick="decrease_special_stat('strength')">-</button><button onclick="increase_special_stat('strength')">+</button></div>
+                <p>Perception: </p><span id="perception-level">6</span><div><button onclick="decrease_special_stat('perception')">-</button><button onclick="increase_special_stat('perception')">+</button></div>
+                <p>Endurance: </p><span id="endurance-level">5</span><div><button onclick="decrease_special_stat('endurance')">-</button><button onclick="increase_special_stat('endurance')">+</button></div>
+                <p>Charisma: </p><span id="charisma-level">4</span><div><button onclick="decrease_special_stat('charisma')">-</button><button onclick="increase_special_stat('charisma')">+</button></div>
+                <p>Intelligence: </p><span id="intelligence-level">3</span><div><button onclick="decrease_special_stat('intelligence')">-</button><button onclick="increase_special_stat('intelligence')">+</button></div>
+                <p>Agility: </p><span id="agility-level">2</span><div><button onclick="decrease_special_stat('agility')">-</button><button onclick="increase_special_stat('agility')">+</button></div>
+                <p>Luck: </p><span id="luck-level">1</span><div><button onclick="decrease_special_stat('luck')">-</button><button onclick="increase_special_stat('luck')">+</button></div>
+            </fieldset>
         </div>
 
         <div class="holder">
@@ -674,7 +689,7 @@
                 <div class="perk">
                     <img src="images/endurance/Fo4_Endurance.webp" alt="fallout 4 endurance icon">
                     <div class="description">
-                        <h1>Perception</h1>
+                        <h1>Endurance</h1>
                     </div>
                 </div>
                 <div class="perk">
@@ -786,6 +801,174 @@
                                 <div class="rank-desc">
                                     <h4>Rank 2</h4>
                                     <p>You gain complete immunity to chem addiction.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/endurance/Fo4_Aquaboy.webp" alt="fallout 4 aquaboy icon">
+                    <div class="description">
+                        <h1>Aquaboy</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Water is your ally. You no longer take radiation damage from swimming, and can breathe underwater.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You become totally undetectable while submerged.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/endurance/FO4_Rad_Resistant.webp" alt="fallout 4 rad resistant icon">
+                    <div class="description">
+                        <h1>Rad Resistant</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Exposure to the Wasteland has made you more resilient, instantly granting +10 Radiation Resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You now have +20 Radiation Resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You now have +30 Radiation Resistance. </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4 (Far Harbor)</h4>
+                                    <p>You now have +40 Radiation Resistance.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/endurance/Fo4_Adamantium_Skeleton.webp" alt="fallout 4 adamantium skeleton icon">
+                    <div class="description">
+                        <h1>Adamantium Skeleton</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Your skeleton has been infused with indestructible metal, reducing limb damage by 30%.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Your limb damage is now reduced by 60%.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Your limb damage is completely eliminated.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/endurance/Fo4_Cannibal.webp" alt="fallout 4 cannibal icon">
+                    <div class="description">
+                        <h1>Canibal</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Feast on mortal flesh to heal your wounds! Eating human corpses restores Health. Each corpse for this rank heals a total of 25 health.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Eating Ghoul or Super Mutant corpses restores Health. Each corpse for this rank heals a total of 25 health.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Eating human, Ghoul or Super Mutant corpses now restores a significant amount of Health. Each corpse for this rank heals a total of 50 health.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/endurance/Fo4_Ghoulish.webp" alt="fallout 4 ghoulish icon">
+                    <div class="description">
+                        <h1>Ghoulish</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Sure, you're still human - on the outside! Radiation now regenerates your lost Health.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Radiation now regenerates even more of your lost Health.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Radiation now regenerates even more of your lost Health, and some Feral Ghouls will randomly become friendly.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4 (Nuka World)</h4>
+                                    <p>Rad damage will now begin to slowly heal, restoring health in the process.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/endurance/Fo4_Solar_Powered.webp" alt="fallout 4 solar powered icon">
+                    <div class="description">
+                        <h1>Solar Powered</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Catch some rays! Gain +2 to Strength and Endurance between the hours of 6:00 a.m. and 6:00 p.m.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Sunlight slowly heals your radiation damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Sunlight slowly regenerates your lost Health.</p>
                                 </div>
                             </li>
                         </ol>
