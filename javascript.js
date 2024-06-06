@@ -18,15 +18,15 @@ const charisma_perks = document.querySelectorAll("#charisma .perk");
 const charisma_holder = document.getElementById("charisma-level");
 
 let intelligence = 1;
-
+const intelligence_perks = document.querySelectorAll("#intelligence .perk");
 const intelligence_holder = document.getElementById("intelligence-level");
 
 let agility = 1;
-
+const agility_perks = document.querySelectorAll("#agility .perk");
 const agility_holder = document.getElementById("agility-level");
 
 let luck = 1;
-
+const luck_perks = document.querySelectorAll("#luck .perk");
 const luck_holder = document.getElementById("luck-level");
 
 window.onload = () => {
@@ -35,6 +35,9 @@ window.onload = () => {
     disable_perk(perception_perks);
     disable_perk(endurance_perks);
     disable_perk(charisma_perks);
+    disable_perk(intelligence_perks);    
+    disable_perk(agility_perks);
+    disable_perk(luck_perks);
 
     document.getElementById("current_level").textContent = "Current Level: " + current_level;
     document.getElementById("unused-points").innerHTML = unused_points;
@@ -263,44 +266,44 @@ const decrease_special_stat = (stat) => {
     switch (stat) {
         case "strength":
             if (strength <= 1) break;
-            strength--;
             disable_perk(strength_perks[strength]);
+            strength--;
             unused_points++;
             break;
         case "perception":
             if (perception <= 1) break;
-            perception--;
             disable_perk(perception_perks[perception]);
+            perception--;
             unused_points++;
             break;
         case "endurance":
             if (endurance <= 1) break;
-            endurance--;
             disable_perk(endurance_perks[endurance]);
+            endurance--;
             unused_points++;
             break;
         case "charisma":
             if (charisma <= 1) break;
-            charisma--;
             disable_perk(charisma_perks[charisma]);
+            charisma--;
             unused_points++;
             break;
         case "intelligence":
             if (intelligence <= 1) break;
-            intelligence--;
             disable_perk(intelligence_perks[intelligence]);
+            intelligence--;
             unused_points++;
             break;
         case "agility":
             if (agility <= 1) break;
-            agility--;
             disable_perk(agility_perks[agility]);
+            agility--;
             unused_points++;
             break;
         case "luck":
             if (luck <= 1) break;
-            luck--;
             disable_perk(luck_perks[luck]);
+            luck--;
             unused_points++;
             break;
         default:
