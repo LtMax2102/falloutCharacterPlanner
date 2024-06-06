@@ -14,7 +14,7 @@ const endurance_perks = document.querySelectorAll("#endurance .perk");
 const endurance_holder = document.getElementById("endurance-level");
 
 let charisma = 1;
-
+const charisma_perks = document.querySelectorAll("#charisma .perk");
 const charisma_holder = document.getElementById("charisma-level");
 
 let intelligence = 1;
@@ -34,6 +34,7 @@ window.onload = () => {
     disable_perk(strength_perks);
     disable_perk(perception_perks);
     disable_perk(endurance_perks);
+    disable_perk(charisma_perks);
 
     document.getElementById("current_level").textContent = "Current Level: " + current_level;
     document.getElementById("unused-points").innerHTML = unused_points;
@@ -42,7 +43,7 @@ window.onload = () => {
 const enable_perk = (perk) => {
     if (perk.length == undefined) {
         if (perk == strength_perks[0]) return;
-
+        console.log(perk);
         const img = perk.querySelector("img");
         const buttons = perk.querySelector(".perk-counter-holder");
 
@@ -55,13 +56,13 @@ const enable_perk = (perk) => {
     }
     else {
         perk.forEach(p => {
-            if (p == perk[0]) return;
+            if (p == perk[0] || p == perk[1]) return;
 
             const img = p.querySelector("img");
             const buttons = p.querySelector(".perk-counter-holder");
     
-            img.style.opacity = "0.7";
-            buttons.style.opacity = "0.7";
+            img.style.opacity = "1";
+            buttons.style.opacity = "1";
     
             buttons.querySelectorAll("button").forEach(b => {
                 b.disabled = true;
@@ -86,7 +87,7 @@ const disable_perk = (perk) => {
     }
     else {
         perk.forEach(p => {
-            if (p == perk[0]) return;
+            if (p == perk[0] || p == perk[1]) return;
 
             const img = p.querySelector("img");
             const buttons = p.querySelector(".perk-counter-holder");
@@ -176,7 +177,6 @@ document.querySelectorAll('.perk img').forEach(img => {
             counter.textContent = count + "/" + amount_of_ranks;
         })
     } 
-
 });
 
 
@@ -212,45 +212,45 @@ const increase_special_stat = (stat) => {
     switch (stat) {
         case "strength":
             if (strength >= 10 || unused_points <= 0) break;
-            enable_perk(strength_perks[strength]);
             strength++;
             unused_points--;
+            enable_perk(strength_perks[strength]);
             break;
         case "perception":
             if (perception >= 10 || unused_points <= 0) break;
-            enable_perk(perception_perks[perception]);
             perception++;
             unused_points--;
+            enable_perk(perception_perks[perception]);
             break;
         case "endurance":
             if (endurance >= 10 || unused_points <= 0) break;
-            enable_perk(endurance_perks[endurance]);
             endurance++;
             unused_points--;
+            enable_perk(endurance_perks[endurance]);
             break;
         case "charisma":
             if (charisma >= 10 || unused_points <= 0) break;
-            enable_perk(charisma_perks[charisma]);
             charisma++;
             unused_points--;
+            enable_perk(charisma_perks[charisma]);
             break;
         case "intelligence":
             if (intelligence >= 10 || unused_points <= 0) break;
-            enable_perk(intelligence_perks[intelligence]);
             intelligence++;
             unused_points--;
+            enable_perk(intelligence_perks[intelligence]);
             break;
         case "agility":
             if (agility >= 10 || unused_points <= 0) break;
-            enable_perk(agility_perks[agility]);
             agility++;
             unused_points--;
+            enable_perk(agility_perks[agility]);
             break;
         case "luck":
             if (luck >= 10 || unused_points <= 0) break;
-            enable_perk(luck_perks[luck]);
             luck++;
             unused_points--;
+            enable_perk(luck_perks[luck]);
             break;
         default:
             break;

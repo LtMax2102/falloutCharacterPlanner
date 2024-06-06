@@ -20,12 +20,12 @@
 
             <fieldset>
                 <legend>S.P.E.C.I.A.L</legend>
-                <p>Strength: </p><span id="strength-level"></span><div><button onclick="decrease_special_stat('strength')">-</button><button onclick="increase_special_stat('strength')">+</button></div>
-                <p>Perception: </p><span id="perception-level">6</span><div><button onclick="decrease_special_stat('perception')">-</button><button onclick="increase_special_stat('perception')">+</button></div>
-                <p>Endurance: </p><span id="endurance-level">5</span><div><button onclick="decrease_special_stat('endurance')">-</button><button onclick="increase_special_stat('endurance')">+</button></div>
-                <p>Charisma: </p><span id="charisma-level">4</span><div><button onclick="decrease_special_stat('charisma')">-</button><button onclick="increase_special_stat('charisma')">+</button></div>
-                <p>Intelligence: </p><span id="intelligence-level">3</span><div><button onclick="decrease_special_stat('intelligence')">-</button><button onclick="increase_special_stat('intelligence')">+</button></div>
-                <p>Agility: </p><span id="agility-level">2</span><div><button onclick="decrease_special_stat('agility')">-</button><button onclick="increase_special_stat('agility')">+</button></div>
+                <p>Strength: </p><span id="strength-level">1</span><div><button onclick="decrease_special_stat('strength')">-</button><button onclick="increase_special_stat('strength')">+</button></div>
+                <p>Perception: </p><span id="perception-level">1</span><div><button onclick="decrease_special_stat('perception')">-</button><button onclick="increase_special_stat('perception')">+</button></div>
+                <p>Endurance: </p><span id="endurance-level">1</span><div><button onclick="decrease_special_stat('endurance')">-</button><button onclick="increase_special_stat('endurance')">+</button></div>
+                <p>Charisma: </p><span id="charisma-level">1</span><div><button onclick="decrease_special_stat('charisma')">-</button><button onclick="increase_special_stat('charisma')">+</button></div>
+                <p>Intelligence: </p><span id="intelligence-level">1</span><div><button onclick="decrease_special_stat('intelligence')">-</button><button onclick="increase_special_stat('intelligence')">+</button></div>
+                <p>Agility: </p><span id="agility-level">1</span><div><button onclick="decrease_special_stat('agility')">-</button><button onclick="increase_special_stat('agility')">+</button></div>
                 <p>Luck: </p><span id="luck-level">1</span><div><button onclick="decrease_special_stat('luck')">-</button><button onclick="increase_special_stat('luck')">+</button></div>
             </fieldset>
         </div>
@@ -975,6 +975,436 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="container" id="charisma">
+                <div class="perk">
+                    <img src="images/charisma/Fo4_Charisma.webp" alt="fallout 4 charisma icon">
+                    <div class="description">
+                        <h1>Charisma</h1>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Cap_Collector.webp" alt="fallout 4 cap collector icon">
+                    <div class="description">
+                        <h1>Cap Collector</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>You've mastered the art of the deal! Buying and selling prices at vendors are better.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Buying and selling prices of vendors are now much better.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You can now invest a total of 500 caps to raise a store's buying capacity.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Lady_Killer.webp" alt="fallout 4 lady killer icon">
+                    <div class="description">
+                        <h1>Lady Killer</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>You're charming... and dangerous. Women suffer +5% damage in combat, and are easier to persuade in dialogue.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Women now suffer +10% damage in combat, and are even easier to persuade in dialogue. They are also easier to pacify with the Intimidation perk.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Women now suffer +15% damage in combat, and are much easier to persuade in dialogue. They are now even easier to pacify with the Intimidation perk.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Lone_Wanderer.webp" alt="fallout 4 lone wanderer icon">
+                    <div class="description">
+                        <h1>Lone Wanderer</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Who needs friends, anyway? When adventuring without a companion, you take 15% less damage and carry weight increases by 50.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>When adventuring without a companion, you take 30% less damage and carry weight increases by 100.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>When adventuring without a companion, you do 25% more damage.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4 (Far Harbor)</h4>
+                                    <p>When adventuring without a companion, you have 25 more action points.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Attack_Dog.webp" alt="fallout 4 attack dog icon">
+                    <div class="description">
+                        <h1>Attack Dog</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Your faithful canine companion can hold an enemy, giving you a greater chance to hit them in V.A.T.S.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>When your dog holds an enemy, there's a chance he'll cripple the limb he's biting.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>When your dog holds an enemy, there's a chance he'll cause them to bleed.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4 (Nuka World)</h4>
+                                    <p>When adventuring with your dog, you take 10% less damage.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Animal_Friend.webp" alt="fallout 4 animal friend icon">
+                    <div class="description">
+                        <h1>Animal Friend</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Commune with beasts! With your gun, aim at any animal below your level and gain a chance to pacify it.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>When you successfully pacify an animal, you can incite it to attack.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>When you successfully pacify an animal, you can give it specific commands.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Local_Leader.webp" alt="fallout 4 local leader icon">
+                    <div class="description">
+                        <h1>Local Leader</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>As the ruler everyone turns to, you are able to establish supply lines between your workshop settlements.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You can build stores and workstations at workshop settlements.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Party_Boy.webp" alt="fallout 4 party boy icon">
+                    <div class="description">
+                        <h1>Party Boy</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Nobody has a good time like you! There's no chance you'll get addicted to alcohol.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>The effects of alcohol are doubled.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Your Luck is increased by 3 while you're under the influence of alcohol.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Inspirational.webp" alt="fallout 4 inspirational icon">
+                    <div class="description">
+                        <h1>Inspirational</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Because you lead by example, your companion does more damage in combat, and cannot hurt you.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>Your companion resists more damage in combat, and can't be harmed by your attacks.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>Your companion can carry more items. Increases carry weight of your companion by 25 pounds.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Wasteland_Whisperer.webp" alt="fallout 4 wasteland whisperer icon">
+                    <div class="description">
+                        <h1>Wasteland Whisperer</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Master the post-apocalypse! With your gun, aim at any Wasteland creature below your level and gain a chance to pacify it.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>When you successfully pacify a creature, you can incite it to attack.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>When you successfully pacify a creature, you can give it specific commands.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/charisma/Fo4_Intimidation.webp" alt="fallout 4 intimidation icon">
+                    <div class="description">
+                        <h1>Intimidation</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>Time to show everyone who's boss! With your gun, aim at any human opponent below your level and gain a chance to pacify them.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>When you successfully pacify someone, you can incite them to attack.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>When you successfully pacify someone, you can give them specific commands.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="intelligence">
+                <div class="perk">
+                    <img src="images/intelligence/Fo4_Intelligence.webp" alt="fallout 4 intelligence icon">
+                    <div class="description">
+                        <h1>Intelligence</h1>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/intelligence/" alt="fallout 4 toughness icon">
+                    <div class="description">
+                        <h1>Toughness</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>If nothing else, you can take a beating! Instantly gain +10 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You now have +20 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You now have +30 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>You now have +40 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5</h4>
+                                    <p>You now have +50 damage resistance.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="agility">
+                <div class="perk">
+                    <img src="images/agility/Fo4_Agility.webp" alt="fallout 4 agility icon">
+                    <div class="description">
+                        <h1>Agility</h1>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/agility/" alt="fallout 4 toughness icon">
+                    <div class="description">
+                        <h1>Toughness</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>If nothing else, you can take a beating! Instantly gain +10 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You now have +20 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You now have +30 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>You now have +40 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5</h4>
+                                    <p>You now have +50 damage resistance.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="luck">
+                <div class="perk">
+                    <img src="images/luck/Fo4_Luck.webp" alt="fallout 4 luck icon">
+                    <div class="description">
+                        <h1>Luck</h1>
+                    </div>
+                </div>
+                <div class="perk">
+                    <div class="perk-counter-holder"><button>-</button><span class="counter">0/0</span><button>+</button></div>
+                    <img src="images/luck/" alt="fallout 4 toughness icon">
+                    <div class="description">
+                        <h1>Toughness</h1>
+                        <ol>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 1</h4>
+                                    <p>If nothing else, you can take a beating! Instantly gain +10 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 2</h4>
+                                    <p>You now have +20 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 3</h4>
+                                    <p>You now have +30 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 4</h4>
+                                    <p>You now have +40 damage resistance.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="rank-desc">
+                                    <h4>Rank 5</h4>
+                                    <p>You now have +50 damage resistance.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </body>
 
