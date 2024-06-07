@@ -160,8 +160,8 @@ document.querySelectorAll('.perk img').forEach(img => {
     const amount_of_ranks = parent.getElementsByClassName("rank-desc").length;
 
     let counter = parent.getElementsByClassName("counter")[0];
+    let descriptions = img.nextElementSibling.querySelectorAll(".rank-desc");
     let count = 0;
-
 
     if (counter) {
         counter.textContent = count + "/" + amount_of_ranks;
@@ -172,11 +172,13 @@ document.querySelectorAll('.perk img').forEach(img => {
         
         button_add.addEventListener("click", () => {
             if (count != amount_of_ranks) count++;
+            descriptions[count - 1].id = "active";
             counter.textContent = count + "/" + amount_of_ranks;
         })
 
         button_minus.addEventListener("click", () => {
             if (count != 0) count--;
+            descriptions[count].removeAttribute("id");
             counter.textContent = count + "/" + amount_of_ranks;
         })
     } 
