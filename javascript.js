@@ -171,15 +171,23 @@ document.querySelectorAll('.perk img').forEach(img => {
         const [button_minus, button_add] = button_container.querySelectorAll("button");
         
         button_add.addEventListener("click", () => {
-            if (count != amount_of_ranks) count++;
-            descriptions[count - 1].id = "active";
-            counter.textContent = count + "/" + amount_of_ranks;
+            if (count != amount_of_ranks && unused_points > 0) { 
+                count++;
+                unused_points--; 
+                descriptions[count - 1].id = "active";
+                counter.textContent = count + "/" + amount_of_ranks;
+                update_special();
+            }
         })
 
         button_minus.addEventListener("click", () => {
-            if (count != 0) count--;
-            descriptions[count].removeAttribute("id");
-            counter.textContent = count + "/" + amount_of_ranks;
+            if (count != 0) {
+                count--;
+                unused_points++;
+                descriptions[count].removeAttribute("id");
+                counter.textContent = count + "/" + amount_of_ranks;
+                update_special();
+            }
         })
     } 
 });
@@ -265,48 +273,112 @@ const increase_special_stat = (stat) => {
 }
 
 const decrease_special_stat = (stat) => {
+    let empty = true;
     switch (stat) {
         case "strength":
             if (strength <= 1) break;
-            disable_perk(strength_perks[strength]);
-            strength--;
-            unused_points++;
+            strength_perks[strength].querySelectorAll(".rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+
+            if (empty) {
+                disable_perk(strength_perks[strength]);
+                strength--;
+                unused_points++;
+            }
             break;
         case "perception":
             if (perception <= 1) break;
-            disable_perk(perception_perks[perception]);
-            perception--;
-            unused_points++;
+            perception_perks[perception].querySelectorAll("rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+
+            if (empty) {
+                disable_perk(perception_perks[perception]);
+                perception--;
+                unused_points++;
+            }
             break;
         case "endurance":
             if (endurance <= 1) break;
-            disable_perk(endurance_perks[endurance]);
-            endurance--;
-            unused_points++;
+            endurance_perks[endurance].querySelectorAll(".rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+            
+            if (empty) {
+                disable_perk(endurance_perks[endurance]);
+                endurance--;
+                unused_points++;
+            }
             break;
         case "charisma":
             if (charisma <= 1) break;
-            disable_perk(charisma_perks[charisma]);
-            charisma--;
-            unused_points++;
+            charisma_perks[charisma].querySelectorAll(".rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+            
+            if (empty) {
+                disable_perk(charisma_perks[charisma]);
+                charisma--;
+                unused_points++;
+            }
             break;
         case "intelligence":
             if (intelligence <= 1) break;
-            disable_perk(intelligence_perks[intelligence]);
-            intelligence--;
-            unused_points++;
+            intelligence_perks[intelligence].querySelectorAll(".rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+            
+            if (empty) {
+                disable_perk(intelligence_perks[intelligence]);
+                intelligence--;
+                unused_points++;
+            }
             break;
         case "agility":
             if (agility <= 1) break;
-            disable_perk(agility_perks[agility]);
-            agility--;
-            unused_points++;
+            agility_perks[agility].querySelectorAll(".rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+            
+            if (empty) {
+                disable_perk(agility_perks[agility]);
+                agility--;
+                unused_points++;
+            }
             break;
         case "luck":
             if (luck <= 1) break;
-            disable_perk(luck_perks[luck]);
-            luck--;
-            unused_points++;
+            luck_perks[luck].querySelectorAll(".rank-desc").forEach(desc => {
+                if (desc.id) {
+                    alert("Current special stat level has points in, remove these before attempting to decrease the special stat");
+                    empty = false;
+                }
+            })
+            
+            if (empty) {
+                disable_perk(luck_perks[luck]);
+                luck--;
+                unused_points++;
+            }
             break;
         default:
             break;
